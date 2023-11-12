@@ -63,17 +63,17 @@
 
         $(function () {
             $('form').submit(function () {
-              let checkSaveFlg = window.confirm('購入を実行してもよろしいですか？');
-
-              if(checkSaveFlg) {
-                document.getElementById("saveResult").textContent = "保存を実行しました。";
-                //const name    = $('input[name="udetate"]').val();
-
-                //return false;
-              } else {
-                document.getElementById("saveResult").textContent = "保存をキャンセルしました。";
-
-              };
+              // let checkSaveFlg = window.confirm('購入を実行してもよろしいですか？');
+              //
+              // if(checkSaveFlg) {
+              //   document.getElementById("saveResult").textContent = "保存を実行しました。";
+              //   //const name    = $('input[name="udetate"]').val();
+              //
+              //   //return false;
+              // } else {
+              //   document.getElementById("saveResult").textContent = "保存をキャンセルしました。";
+              //
+              // };
               const item1 = $('[name=item1]').val();
               //const msg = `${name}\n${item1}\n`;
               const msg = `${item1}\n`;
