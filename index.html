@@ -73,12 +73,12 @@
                 const msg = `${item1}\n`;
                 console.log(msg);
                 sendText(msg);
-                return false;
+                //return false;
               } else {
                 document.getElementById("saveResult").textContent = "保存をキャンセルしました。";
-                return false;
-              }
 
+              }
+              return false;
             });
         });
 
