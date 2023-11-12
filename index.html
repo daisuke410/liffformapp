@@ -68,17 +68,17 @@
               if(checkSaveFlg) {
                 document.getElementById("saveResult").textContent = "保存を実行しました。";
                 //const name    = $('input[name="udetate"]').val();
-                const item1 = $('[name=item1]').val();
-                //const msg = `${name}\n${item1}\n`;
-                const msg = `${item1}\n`;
-                console.log(msg);
-                sendText(msg);
+
                 //return false;
               } else {
                 document.getElementById("saveResult").textContent = "保存をキャンセルしました。";
 
-              }
-              return false;
+              };
+              const item1 = $('[name=item1]').val();
+              //const msg = `${name}\n${item1}\n`;
+              const msg = `${item1}\n`;
+              console.log(msg);
+              sendText(msg);
             });
         });
 
