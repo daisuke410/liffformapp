@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>筋トレ管理</title>
+    <title>コーヒーカプセル購入管理</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
@@ -14,14 +14,14 @@
         <div>
             <input class="form-control w-100 mt-1" name="udetate" required>
         </div>
-        <select name="pets" id="pet-select">
+        <select name="item" id="item-select">
           <option value="">--Please choose an option--</option>
-          <option value="dog">Dog</option>
-          <option value="cat">Cat</option>
-          <option value="hamster">Hamster</option>
-          <option value="parrot">Parrot</option>
-          <option value="spider">Spider</option>
-          <option value="goldfish">Goldfish</option>
+          <option value="スタバキャラメルマキアート">スタバキャラメルマキアート(180円)</option>
+          <option value="レギュラーブレンド">レギュラーブレンド（80円）</option>
+          <option value="リッチブレンド">リッチブレンド(80円)</option>
+          <option value="カフェオレ">カフェオレ(80円)</option>
+          <option value="スタバカフェラテ">スタバカフェラテ(100円)</option>
+          <option value="チョコチーノ">チョコチーノ(150円)</option>
         </select>
 
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
@@ -66,11 +66,11 @@
         $(function () {
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
-                const udetate = $('input[name="udetate"]').val();
+                const item = $('name="item').val();
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const msg = `${name}\n${item}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
                 return false;
             });
