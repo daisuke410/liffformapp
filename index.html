@@ -14,7 +14,7 @@
         <div>
             <input class="form-control w-100 mt-1" name="udetate" required>
         </div>
-        <select name="item" id="item-select">
+        <select name="item1" id="item-select">
           <option value="">--Please choose an option--</option>
           <option value="スタバキャラメルマキアート">スタバキャラメルマキアート(180円)</option>
           <option value="レギュラーブレンド">レギュラーブレンド（80円）</option>
@@ -66,7 +66,7 @@
         $(function () {
             $('form').submit(function () {
                 const name    = $('input[name="udetate"]').val();
-                const item = $('name="item').val();
+                const item = $('[name=item1]').val();
                 const msg = `${name}\n${item}\n`;
                 sendText(msg);
                 return false;
