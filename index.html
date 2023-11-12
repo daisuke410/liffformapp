@@ -65,12 +65,9 @@
 
         $(function () {
             $('form').submit(function () {
-                const name    = $('input[name="name"]').val();
+                const name    = $('input[name="udetate"]').val();
                 const item = $('name="item').val();
-                const fukkin  = $('input[name="fukkin"]').val();
-                const haikin  = $('input[name="haikin"]').val();
-                const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `${name}\n${item}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const msg = `${name}\n${item}\n`;
                 sendText(msg);
                 return false;
             });
