@@ -10,10 +10,7 @@
 <body>
 
     <form class="w-75 mx-auto">
-        <p class="mt-3">スターバックス　キャラメルマキアート</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="udetate" required>
-        </div>
+        <p class="mt-3">カプセルを選択して下さい</p>
         <select name="item1" id="item-select">
           <option value="">--Please choose an option--</option>
           <option value="スタバキャラメルマキアート">スタバキャラメルマキアート(180円)</option>
@@ -22,9 +19,9 @@
           <option value="カフェオレ">カフェオレ(80円)</option>
           <option value="スタバカフェラテ">スタバカフェラテ(100円)</option>
           <option value="チョコチーノ">チョコチーノ(150円)</option>
-        </select>
+        </select><br>
 
-        <input type="submit" class="mt-4 btn btn-primary" value="送信">
+        <input type="submit" class="mt-4 btn btn-primary" value="購入する">
     </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -35,6 +32,7 @@
     <script>
 
         $(document).ready(function () {
+
             const liffId = "2001621127-EZG65RJN";
             initializeLiff(liffId);
         })
@@ -65,13 +63,22 @@
 
         $(function () {
             $('form').submit(function () {
+              let checkSaveFlg = window.confirm('購入を実行してもよろしいですか？');
+
+              if(checkSaveFlg) {
+                document.getElementById("saveResult").textContent = "保存を実行しました。";
                 //const name    = $('input[name="udetate"]').val();
                 const item1 = $('[name=item1]').val();
-                const msg = `${name}\n${item1}\n`;
+                //const msg = `${name}\n${item1}\n`;
                 const msg = `${item1}\n`;
                 console.log(msg);
                 sendText(msg);
                 return false;
+              } else {
+                document.getElementById("saveResult").textContent = "保存をキャンセルしました。";
+                return false;
+              }
+
             });
         });
 
